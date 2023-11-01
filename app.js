@@ -8,7 +8,7 @@ const cors = require('cors');
 const app = express();
 
 const DATABASE = "mongodb+srv://manishkaswan88:9gUTpj4Y2LOwwIC6@cluster0.hglx7nh.mongodb.net/?retryWrites=true&w=majority";
-const BASE_URL = "http://localhost:3001";
+const BASE_URL = "http://localhost:3000";
 const PORT = process.env.PORT;
 
 app.use(cors({
