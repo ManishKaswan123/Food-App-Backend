@@ -11,20 +11,20 @@ const DATABASE = process.env.DATABASE;
 const BASE_URL = process.env.BASE_URL;
 const PORT = process.env.PORT || 3000;
 
-// app.use(cors({
-//   origin: `${BASE_URL}`,  
-//   credentials: true,  
-// }));
-
 app.use(cors({
-  origin: function (origin, callback) {
-    if (!origin || BASE_URL.includes(origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error('Not allowed by CORS'));
-    }
-  },
+  origin: `${BASE_URL}`,  
+  credentials: true,  
 }));
+
+// app.use(cors({
+//   origin: function (origin, callback) {
+//     if (!origin || BASE_URL.includes(origin)) {
+//       callback(null, true);
+//     } else {
+//       callback(new Error('Not allowed by CORS'));
+//     }
+//   },
+// }));
 
 app.listen(PORT, () => {
   console.log(`Example app listening on port ${PORT}`);
