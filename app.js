@@ -7,9 +7,9 @@ const cookieParser = require('cookie-parser');
 const cors = require('cors');
 const app = express();
 
-const DATABASE = process.env.DATABASE;
-const BASE_URL = process.env.BASE_URL;
-const PORT = process.env.PORT || 3000;
+const DATABASE = "mongodb+srv://manishkaswan88:9gUTpj4Y2LOwwIC6@cluster0.hglx7nh.mongodb.net/?retryWrites=true&w=majority";
+const BASE_URL = "http://localhost:3001";
+const PORT = process.env.PORT;
 
 app.use(cors({
   origin: `${BASE_URL}`,  
